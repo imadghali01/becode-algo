@@ -27,18 +27,18 @@ function legsCount(chickens,cows,pigs){
     let sum = 0;
     const animalsArray=[
         {   
-            name: chickens,
+            name: "chickens",
             quantity: chickens,
             legNbr:2
         },
         {
-            name: cows,
+            name: "cows",
             quantity: cows,
             legNbr:4
 
         },
         {
-            name: pigs,
+            name: "pigs",
             quantity: pigs,
             legNbr: 4
         }
