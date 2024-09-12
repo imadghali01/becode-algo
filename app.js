@@ -12,7 +12,6 @@ toArray({ shrimp: 15, tots: 12 }) ➞ [["shrimp", 15], ["tots", 12]]
 toArray({}) ➞ []
 */
 function toArray(o){
-
     var arr = Object.entries(o);
     return arr;
 }
