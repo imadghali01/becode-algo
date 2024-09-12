@@ -1,24 +1,22 @@
-/*Create a function that will return an integer number 
-corresponding to the amount of digits in the given integer num.
+/*Write a function that converts an object into an array, 
+where each element represents a key-value pair in the form of an array.
+Notes
+
+Return an empty array if the object is empty.
 Expected results
 
-num_of_digits(1000) ➞ 4
+toArray({ a: 1, b: 2 }) ➞ [["a", 1], ["b", 2]]
 
-num_of_digits(12) ➞ 2
+toArray({ shrimp: 15, tots: 12 }) ➞ [["shrimp", 15], ["tots", 12]]
 
-num_of_digits(1305981031) ➞ 10
-
-num_of_digits(0) ➞ 1
+toArray({}) ➞ []
 */
-function numOfDig(nbr){
-    let divCount = 1;
-    while(nbr >= 10){
-        divCount++;
-        nbr/=10;
-    }
-    return divCount;
+function toArray(o){
+
+    var arr = Object.entries(o);
+    return arr;
 }
-console.log(numOfDig(1000));
-console.log(numOfDig(12));
-console.log(numOfDig(1305981031));
-console.log(numOfDig(0));
+console.log(toArray({ a: 1, b: 2 }));
+console.log(toArray({ shrimp: 15, tots: 12 }));
+console.log(toArray({}));
+
