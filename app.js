@@ -1,21 +1,26 @@
-/*Write a function that converts an object into an array, 
-where each element represents a key-value pair in the form of an array.
+/*Create a function that takes two numbers as arguments (num, length) and returns an array
+of multiples of num until the array length reaches length.
 Notes
 
-Return an empty array if the object is empty.
+Notice that num is also included in the returned array.
 Expected results
 
-toArray({ a: 1, b: 2 }) ➞ [["a", 1], ["b", 2]]
+arrayOfMultiples(7, 5) ➞ [7, 14, 21, 28, 35]
 
-toArray({ shrimp: 15, tots: 12 }) ➞ [["shrimp", 15], ["tots", 12]]
+arrayOfMultiples(12, 10) ➞ [12, 24, 36, 48, 60, 72, 84, 96, 108, 120]
 
-toArray({}) ➞ []
+arrayOfMultiples(17, 6) ➞ [17, 34, 51, 68, 85, 102]
 */
-function toArray(o){
-    var arr = Object.entries(o);
-    return arr;
+function arrayOfMultiples(num, length){
+    let calculMult=0;
+    let array=[];
+    for (let i = 0; i < length ; i++) {
+        calculMult+=num
+        array[i] = calculMult;
+        
+    }
+    return array;
 }
-console.log(toArray({ a: 1, b: 2 }));
-console.log(toArray({ shrimp: 15, tots: 12 }));
-console.log(toArray({}));
-
+console.log(arrayOfMultiples(7, 5));
+console.log(arrayOfMultiples(12, 10));
+console.log(arrayOfMultiples(17, 6));
