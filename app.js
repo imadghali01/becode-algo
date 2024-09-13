@@ -22,18 +22,18 @@ removeLeadingTrailing("30") ➞ "30"
 
 function removeLeadingTrailing(number){
     
-    let tArray = number.split("");
+    let tArray = number.split('');
     let pointIndex = tArray.indexOf(".");
     let count = 0;
 
     while(tArray[count] == "0"){
-        count++;
         tArray.shift();   
+        count++;
     }
-    if(pointIndex && pointIndex != null){
+    if(pointIndex){
         for (let i = tArray.length-1 ; i >= pointIndex; i--) {
             if(tArray[i] == "0" || tArray[i] == "."){
-                tArray.pop();4
+                tArray.pop();
             }
             else{
                 break
@@ -44,6 +44,6 @@ function removeLeadingTrailing(number){
 }
 
 console.log(removeLeadingTrailing("230.000"));
-console.log(removeLeadingTrailing("00402"));
+console.log(removeLeadingTrailing("000000402"));
 console.log(removeLeadingTrailing("03.1400"));
 console.log(removeLeadingTrailing("30"));
