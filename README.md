@@ -1,28 +1,31 @@
 # becode-algo
  algo
 
-## part 2 exo 05
+## part 2 exo 6
+In this challenge you will be given an array similar to the following:
 
-Create a function that takes in a number as a string n and returns the number without trailing and leading zeros.
+[[3], 4, [2], [5], 1, 6]
 
-    Trailing Zeros are the zeros after a decimal point which don't affect the value (e.g. the last three zeros in 3.4000 and 3.04000).
-    Leading Zeros are the zeros before a whole number which don't affect the value (e.g. the first three zeros in 000234 and 000230).
+In words, elements of the array are either an integer or an array containing a single integer. We humans can clearly see that this array can reasonably be sorted according to "the content of the elements" as:
 
+[1, [2], [3], 4, [5], 6]
+
+Create a function that, given an array similar to the above, sorts the array according to the "content of the elements".
 Notes
 
-    Return a string.
-    If you get a number with .0 on the end, return the integer value (e.g. return "4" rather than "4.0").
-    If the number is 0, 0.0, 000, 00.00, etc... return "0".
-
+To reiterate, elements of the array will be either integers or arrays with a single integer.
 Expected results
 
-removeLeadingTrailing("230.000") ➞ "230"
+sortIt([4, 1, 3]) ➞ [1, 3, 4]
 
-removeLeadingTrailing("00402") ➞ "402"
+sortIt([[4], [1], [3]]) ➞ [[1], [3], [4]]
 
-removeLeadingTrailing("03.1400") ➞ "3.14"
+sortIt([4, [1], 3]) ➞ [[1], 3, 4]
 
-removeLeadingTrailing("30") ➞ "30"
+sortIt([[4], 1, [3]]) ➞ [1, [3], [4]]
+
+sortIt([[3], 4, [2], [5], 1, 6]) ➞ [1, [2], [3], 4, [5], 6]
+
 
 
 
