@@ -23,8 +23,9 @@ drinks = [
     {name: "water", price: 3},
   ]
 function arrayCleaner(anArray){
+    
     let ordredArray = [anArray[0]];
-    let switchVar;
+
     for(let i=0 ; i<anArray.length ; i++) {
         if(anArray[i].price < ordredArray[0].price){
             ordredArray.unshift(anArray[i]);
