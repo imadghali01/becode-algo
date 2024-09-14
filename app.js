@@ -30,7 +30,7 @@ function removeLeadingTrailing(number){
         tArray.shift();   
         count++;
     }
-    if(pointIndex){
+    if(pointIndex !== -1){
         for (let i = tArray.length-1 ; i >= pointIndex; i--) {
             if(tArray[i] == "0" || tArray[i] == "."){
                 tArray.pop();
@@ -44,6 +44,6 @@ function removeLeadingTrailing(number){
 }
 
 console.log(removeLeadingTrailing("230.000"));
-console.log(removeLeadingTrailing("000000402"));
+console.log(removeLeadingTrailing("00402"));
 console.log(removeLeadingTrailing("03.1400"));
 console.log(removeLeadingTrailing("30"));
