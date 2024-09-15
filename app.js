@@ -14,7 +14,7 @@ detectWord("YFemHUFBbezFBYzFBYLleGBYEFGBMENTment") ➞ "embezzlement"
 */
 function detectWord(aString){
     
-    let stringFilter=aString.replace( /[^a-z]/g, '' );;
+    let stringFilter=aString.replace( /[^a-z]/g, '' );
     return stringFilter;
 }
 console.log(detectWord("UcUNFYGaFYFYGtNUH"));
