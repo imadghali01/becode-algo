@@ -1,19 +1,24 @@
 # becode-algo
  algo
 
-## part 2 exo 7
+## part 2 exo 8
 
-Create a function that takes two numbers and a mathematical operator + - / * and will perform a calculation with the given numbers.
+Create a function that takes a country's name and its area as arguments and returns the area of the country's proportion of the total world's landmass.
 Notes
 
-If the input tries to divide by 0, return: "Can't divide by 0!"
+    The total world's landmass is 148,940,000 [Km^2]
+    Round the result to two decimal places.
+
 Expected results
 
-calculator(2, "+", 2) ➞ 4
+areaOfCountry("Russia", 17098242) ➞ "Russia is 11.48% of the total world's landmass"
 
-calculator(2, "*", 2) ➞ 4
+areaOfCountry("USA", 9372610), "USA is 6.29% of the total world's landmass"
 
-calculator(4, "/", 2) ➞ 2
+areaOfCountry("Iran", 1648195) ➞ "Iran is 1.11% of the total world's landmass"
+Notes
+The total world's landmass is 148,940,000 [Km^2]
+Round the result to two decimal places.
 
 
 
