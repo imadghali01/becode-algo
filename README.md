@@ -1,9 +1,8 @@
 # becode-algo
  algo
 
-## part 2 exo 7
-
-Create a function that takes two numbers and a mathematical operator + - / * and will perform a calculation with the given numbers.
+ ## part2 exo7
+ Create a function that takes two numbers and a mathematical operator + - / * and will perform a calculation with the given numbers.
 Notes
 
 If the input tries to divide by 0, return: "Can't divide by 0!"
@@ -14,12 +13,4 @@ calculator(2, "+", 2) ➞ 4
 calculator(2, "*", 2) ➞ 4
 
 calculator(4, "/", 2) ➞ 2
-
-
-
-
-
-
-
-
 
