@@ -15,3 +15,12 @@ Notes
 The total world's landmass is 148,940,000 [Km^2]
 Round the result to two decimal places.
 */
+function areaOfCountry(land, area){
+    let landmass = 148940000;
+    let percentage = (area*100/landmass).toFixed(2);
+    return `${land} is ${percentage}% of the total world landmass`;
+
+}
+console.log(areaOfCountry("Russia", 17098242));
+console.log(areaOfCountry("USA", 9372610));
+console.log(areaOfCountry("Iran", 1648195));
