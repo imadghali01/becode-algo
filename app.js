@@ -27,29 +27,25 @@ sortIt([[4], 1, [3]]) ➞ [1, [3], [4]]
 sortIt([[3], 4, [2], [5], 1, 6]) ➞ [1, [2], [3], 4, [5], 6]
 */
 function sortIt(array){
-
-    let sortedArray = [];
     
-    for(let i=0 ; i<array.length ; i++) {
-        if (Array.isArray(array[i])){
-            if(array[i][0] < sortedArray[i]){
-                sortedArray.unshift(array[i]);
+    
+        // Aplatir le tableau tout en conservant la structure des sous-tableaux
+    let flatArray = arr.flat(Infinity).sort((a, b) => a - b);
+        
+        // Fonction pour reconstruire la structure
+    function reBuildArray(sortedArray, originalArray) {
+    let index = 0;
+        return originalArray.map(item => {
+            if (Array.isArray(item)) {
+                return [sortedArray[index++]];
+            } else {
+                return sortedArray[index++];
             }
-            else if(array[i][0] > sortedArray[sortedArray.length-1]){
-                sortedArray.push(array[i]);
-            }
-        }
-        else{
-            if(array[i] < sortedArray[0]){
-                sortedArray.unshift(array[i]);
-            }
-            else if(array[i] > sortedArray[sortedArray.length-1]){
-                sortedArray.push(array[i]);
-            }
-        }
+        });
     }
-
-    return sortedArray;
+    
+    return reBuildArray(flatArray, array);
+    
 }
 console.log(sortIt([4, 1, 3]));
 console.log(sortIt([[4], [1], [3]]));
