@@ -13,14 +13,9 @@ reverseOdd("Make sure uoy only esrever sdrow of ddo length")
 */
 function reverseOdd(string){
 
-    let stringSpliter = string.trim().split(/\s+/);
-    stringSpliter.forEach(element => {
-        if((element.length)% 2 !== 0 ){
-            element.split('').reverse();
-        }
-    });
-        
-    return stringSpliter.join(' ');
+    let stringSpliter = string.trim().split(' ');
+    const wordsInverser = stringSpliter.map(word => word.length % 2 !== 0 ? word.split('').reverse().join('') : word);
+    return wordsInverser.join(' ');
 
 }
 console.log(reverseOdd("Bananas"));
