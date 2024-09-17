@@ -1,37 +1,63 @@
-/*Create a function that determines whether a number is Oddish or Evenish. A number is Oddish if the sum of all of its digits is odd, and a number is Evenish if the sum of all of its digits is even. If a number is Oddish, return "Oddish". Otherwise, return "Evenish".
+/*
+Create a function that takes an array of objects (groceries) which calculates the total price and returns it as a number. A grocery object has a product, a quantity and a price, for example:
+{
+  "product": "Milk",
+  "quantity": 1,
+  "price": 1.50
+}
 
-For example, oddishOrEvenish(121) should return "Evenish", since 1 + 2 + 1 = 4. oddishOrEvenish(41) should return "Oddish", since 4 + 1 = 5.
 Expected results
 
-oddishOrEvenish(43) ➞ "Oddish"
-// 4 + 3 = 7
-// 7 % 2 = 1
+// 1 bottle of milk:
+getTotalPrice([
+  { product: "Milk", quantity: 1, price: 1.50 }
+]) ➞ 1.5
 
-oddishOrEvenish(373) ➞ "Oddish"
-// 3 + 7 + 3 = 13
-// 13 % 2 = 1
+// 1 bottle of milk & 1 box of cereals:
+getTotalPrice([
+  { product: "Milk", quantity: 1, price: 1.50 },
+  { product: "Cereals", quantity: 1, price: 2.50 }
+]) ➞ 4
 
-oddishOrEvenish(4433) ➞ "Evenish"
-// 4 + 4 + 3 + 3 = 14
-// 14 % 2 = 0
+// 3 bottles of milk:
+getTotalPrice([
+  { product: "Milk", quantity: 3, price: 1.50 }
+]) ➞ 4.5
+
+// Several groceries:
+getTotalPrice([
+  { product: "Milk", quantity: 1, price: 1.50 },
+  { product: "Eggs", quantity: 12, price: 0.10 },
+  { product: "Bread", quantity: 2, price: 1.60 },
+  { product: "Cheese", quantity: 1, price: 4.50 }
+]) ➞ 10.4
+
+// Some cheap candy:
+getTotalPrice([
+  { product: "Chocolate", quantity: 1, price: 0.10 },
+  { product: "Lollipop", quantity: 1, price: 0.20 }
+]) ➞ 0.3
 */
-function oddishOrEvenish(number){
-    numArray = numberToArray(number)
-    function numberToArray(num) {
-        // Convertir le nombre en chaîne, puis en tableau de chiffres
-        return num.toString().split('').map(Number);
-    }
-    let sumIndex = 0;
-    for(let i = 0; i < numArray.length-1; i++) {
-        sumIndex += numArray[i];
-    }
-    if(sumIndex % 2 == "0"){
-        return "Oddish";
-    }
-    else{
-        return "Evenish";
-    }
+function getTotalPrice(objectArray){
+    let sumPrice = 0;
+    objectArray.forEach(element => {
+        sumPrice+=(element.price * element.quantity);
+    });
+    return parseFloat(sumPrice).toFixed(1);
 }
-console.log(oddishOrEvenish(43));
-console.log(oddishOrEvenish(373));
-console.log(oddishOrEvenish(4433));
+console.log(getTotalPrice([
+    { product: "Milk", quantity: 1, price: 1.50 }
+]));
+console.log(getTotalPrice([
+    { product: "Milk", quantity: 1, price: 1.50 },
+    { product: "Cereals", quantity: 1, price: 2.50 }
+]));
+console.log(getTotalPrice([
+    { product: "Milk", quantity: 3, price: 1.50 }
+]));
+console.log(getTotalPrice([
+    { product: "Milk", quantity: 1, price: 1.50 },
+    { product: "Eggs", quantity: 12, price: 0.10 },
+    { product: "Bread", quantity: 2, price: 1.60 },
+    { product: "Cheese", quantity: 1, price: 4.50 }
+  ]));
