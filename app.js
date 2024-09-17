@@ -16,7 +16,22 @@ oddishOrEvenish(4433) ➞ "Evenish"
 // 14 % 2 = 0
 */
 function oddishOrEvenish(number){
-    numArray = number.slice();
-    if(number){}
-    else
+    numArray = numberToArray(number)
+    function numberToArray(num) {
+        // Convertir le nombre en chaîne, puis en tableau de chiffres
+        return num.toString().split('').map(Number);
+    }
+    let sumIndex = 0;
+    for(let i = 0; i < numArray.length-1; i++) {
+        sumIndex += numArray[i];
+    }
+    if(sumIndex % 2 == "0"){
+        return "Oddish";
+    }
+    else{
+        return "Evenish";
+    }
 }
+console.log(oddishOrEvenish(43));
+console.log(oddishOrEvenish(373));
+console.log(oddishOrEvenish(4433));

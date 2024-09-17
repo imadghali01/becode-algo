@@ -1,20 +1,21 @@
 # becode-algo
  algo
  
- ## algo part2 exo9
+ ## algo part3 exo 00
 
- Given an input string, reverse the string word by word, the first word will be the last, and so on.
-Notes
+Create a function that determines whether a number is Oddish or Evenish. A number is Oddish if the sum of all of its digits is odd, and a number is Evenish if the sum of all of its digits is even. If a number is Oddish, return "Oddish". Otherwise, return "Evenish".
 
-    A word is defined as a sequence of non-space characters.
-    The input string may contain leading or trailing spaces. However, your reversed string should not contain leading or trailing spaces.
-    You need to reduce multiple spaces between two words to a single space in the reversed string.
-
+For example, oddishOrEvenish(121) should return "Evenish", since 1 + 2 + 1 = 4. oddishOrEvenish(41) should return "Oddish", since 4 + 1 = 5.
 Expected results
 
-reverseWords(" the sky is blue") ➞ "blue is sky the"
+oddishOrEvenish(43) ➞ "Oddish"
+// 4 + 3 = 7
+// 7 % 2 = 1
 
-reverseWords("hello   world!  ") ➞ "world! hello"
+oddishOrEvenish(373) ➞ "Oddish"
+// 3 + 7 + 3 = 13
+// 13 % 2 = 1
 
-reverseWords("a good example") ➞ "example good a"
-r
+oddishOrEvenish(4433) ➞ "Evenish"
+// 4 + 4 + 3 + 3 = 14
+// 14 % 2 = 0
