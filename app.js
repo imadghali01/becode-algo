@@ -14,10 +14,10 @@ reverseWords("hello   world!  ") ➞ "world! hello"
 reverseWords("a good example") ➞ "example good a"
 */
 function reverseWords(string){
+    let stringSpliter = string.trim().split(/\s+/).reverse().join(' ');
     
-    
-    let trimReverser = string.trim().split(' ').reverse();
-    return trimReverser.toString().replace(/,/g, " ");
+    return stringSpliter;
+
 }
 
 console.log(reverseWords(" the sky is blue"));
