@@ -1,38 +1,24 @@
-/*Carlos is a huge fan of something he calls smooth sentences.
-
-A smooth sentence is one where the last letter of each word is identical to the first letter the following word (and not case sensitive, so "A" would be the same as "a").
-
-The following would be a smooth sentence "Carlos swam masterfully" because "Carlos" ends with an "s" and swam begins with an "s" and swam ends with an "m" and masterfully begins with an "m".
-
-Create a function that determines whether the input sentence is a smooth sentence, returning a boolean value true if it is, false if it is not.
-Notes
-
-    The last and first letters are case insensitive.
-    There will be no punctuation in each sentence.
-
+/*Create a function that takes an array of numbers and return "Boom!" if the digit 7 appears in the array. Otherwise, return "there is no 7 in the array".
 Expected results
 
-isSmooth("Marta appreciated deep perpendicular right trapezoids") ➞ true
+sevenBoom([1, 2, 3, 4, 5, 6, 7]) ➞ "Boom!"
+// 7 contains the number seven.
 
-isSmooth("Someone is outside the doorway") ➞ false
+sevenBoom([8, 6, 33, 100]) ➞ "there is no 7 in the array"
+// None of the items contain 7 within them.
 
-isSmooth("She eats super righteously") ➞ true
+sevenBoom([2, 55, 60, 97, 86]) ➞ "Boom!"
+// 97 contains the number seven.
 */
-
-function isSmooth(string){
-    let sToArray = string.split(' ');
-    let tOrF = true;
-    sToArray.forEach(element => {
-        element.split('');
-    });
-    for (let i = 0; i < sToArray.length-2; i++) {
-        if(!(sToArray[i][sToArray[i].length-1] == sToArray[i+1][0])){
-            tOrF = false;
-            break;
+function sevenBoom(numArray){
+    for (let num of numArray) {
+        if (num.toString().includes('7')) {
+            return "Boom!";
         }
     }
-    return tOrF;
+    return "there is no 7 in the array";
+    
 }
-console.log(isSmooth("Marta appreciated deep perpendicular right trapezoids"));
-console.log(isSmooth("Someone is outside the doorway"));
-console.log(isSmooth("She eats super righteously"));
+console.log(sevenBoom([1, 2, 3, 4, 5, 6, 7]));
+console.log(sevenBoom([8, 6, 33, 100]));
+console.log(sevenBoom([2, 55, 60, 97, 86]));
