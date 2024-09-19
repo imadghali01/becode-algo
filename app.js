@@ -1,33 +1,57 @@
-/*Given what is supposed to be typed and what is actually typed, write a function that returns the broken key(s). The function looks like:
+/*
+
+Create a functions that takes a num argument. You should then console.log all numbers from 1 to num.
+
+But here’s the catch : multiple of 3 should print “Fizz” and multiples of 5 shoudl print “Buzz”. Lastly if the number is multiple of 3 and 5, it should print FizzBuzz
 Notes
 
-    Broken keys should be ordered by when they first appear in the sentence.
-    Only one broken key per letter should be listed.
-    Letters will all be in lower case.
+    Your code should be modular. You must be able to pass any numbers as n and the code should still work.
 
 Expected results
 
-findBrokenKeys("happy birthday", "hawwy birthday") ➞ ["p"]
+In the console, if the num is 20, for example :
 
-findBrokenKeys("starry night", "starrq light") ➞ ["y", "n"]
-
-findBrokenKeys("beethoven", "affthoif5") ➞ ["b", "e", "v", "n"]
+1
+2
+Fizz
+4
+Buzz
+Fizz
+7
+8
+Fizz
+Buzz
+11
+Fizz
+13
+14
+FizzBuzz
+16
+17
+Fizz
+19
+Buzz
 */
-function findBrokenKeys(string1, string2){
-    function stringSpliter(strings){
-        return strings.split('');
+function fizzBuzz(number){
+    for (let i = 1; i <= number ; i++) {
+        let currentNum = isTreeOr5(i);
+        console.log(currentNum)
     }
-    let sOneArray = stringSpliter(string1);
-    let sTwoArray = stringSpliter(string2);
-    let comparArray=[];
-    for (let i = 0; i < sOneArray.length; i++) {
-        if(sOneArray[i] !== sTwoArray[i] && !(comparArray.includes(sOneArray[i]))){
-            comparArray.push(sOneArray[i]);
+    function isTreeOr5(aNum){
+        if(aNum % 3 == 0 && aNum % 5 == 0){
+            return "FizzBuzz"
+        }
+        else if(aNum % 3 == 0){
+            return "Fizz";
+        }
+        else if(aNum % 5 == 0){
+            return "Buzz";
+        }
+        else{
+            return aNum;
         }
     }
-    return comparArray;
-    
 }
-console.log(findBrokenKeys("happy birthday", "hawwy birthday"));
-console.log(findBrokenKeys("starry night", "starrq light"));
-console.log(findBrokenKeys("beethoven", "affthoif5"));
+fizzBuzz(10);
+fizzBuzz(30);
+fizzBuzz(18);

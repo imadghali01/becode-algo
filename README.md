@@ -1,19 +1,39 @@
 # becode-algo
  algo
  
- ## algo part3 exo 5
+ ## algo advenced 00
+
  
- Create a function that converts Celsius to Fahrenheit and vice versa.
+
+Create a functions that takes a num argument. You should then console.log all numbers from 1 to num.
+
+But here’s the catch : multiple of 3 should print “Fizz” and multiples of 5 shoudl print “Buzz”. Lastly if the number is multiple of 3 and 5, it should print FizzBuzz
 Notes
 
-    Round to the nearest integer.
-    If the input is incorrect, return "Error".
-    Look on Google how to convert F to C and vice-versa
+    Your code should be modular. You must be able to pass any numbers as n and the code should still work.
 
 Expected results
 
-convert("35°C") ➞ "95°F"
+In the console, if the num is 20, for example :
 
-convert("19°F") ➞ "-7°C"
+1
+2
+Fizz
+4
+Buzz
+Fizz
+7
+8
+Fizz
+Buzz
+11
+Fizz
+13
+14
+FizzBuzz
+16
+17
+Fizz
+19
+Buzz
 
-convert("33") ➞ "Error"
