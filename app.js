@@ -1,24 +1,40 @@
-/*Create a function that takes an array of numbers and return "Boom!" if the digit 7 appears in the array. Otherwise, return "there is no 7 in the array".
+/*Create a function that converts Celsius to Fahrenheit and vice versa.
+Notes
+
+    Round to the nearest integer.
+    If the input is incorrect, return "Error".
+    Look on Google how to convert F to C and vice-versa
+
 Expected results
 
-sevenBoom([1, 2, 3, 4, 5, 6, 7]) ➞ "Boom!"
-// 7 contains the number seven.
+convert("35°C") ➞ "95°F"
 
-sevenBoom([8, 6, 33, 100]) ➞ "there is no 7 in the array"
-// None of the items contain 7 within them.
+convert("19°F") ➞ "-7°C"
 
-sevenBoom([2, 55, 60, 97, 86]) ➞ "Boom!"
-// 97 contains the number seven.
+convert("33") ➞ "Error"
 */
-function sevenBoom(numArray){
-    for (let num of numArray) {
-        if (num.toString().includes('7')) {
-            return "Boom!";
-        }
+//Celsius * 9/5 + 32
+function convert(string){
+    let verifData = string.match(/(\d+)(°[FC])/);
+    if(!verifData){
+        return "Error";
     }
-    return "there is no 7 in the array";
-    
+    let temp = parseInt(verifData[1]);
+    let unit = verifData[2];
+    let calcul;
+    if(unit === "°C"){
+        calcul = temp * 9/5 + 32;
+        return `${Math.round(calcul)}°F`;
+    }
+    else if(unit === "°F"){
+        calcul= (temp- 32) * 5/9;
+        return `${Math.round(calcul)}°C`;
+    }
+    else{
+        return "Error";
+    }
 }
-console.log(sevenBoom([1, 2, 3, 4, 5, 6, 7]));
-console.log(sevenBoom([8, 6, 33, 100]));
-console.log(sevenBoom([2, 55, 60, 97, 86]));
+
+console.log(convert("35°C"));
+console.log(convert("19°F"));
+console.log(convert("33"));
