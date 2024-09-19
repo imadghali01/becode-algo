@@ -1,40 +1,33 @@
-/*Create a function that converts Celsius to Fahrenheit and vice versa.
+/*Given what is supposed to be typed and what is actually typed, write a function that returns the broken key(s). The function looks like:
 Notes
 
-    Round to the nearest integer.
-    If the input is incorrect, return "Error".
-    Look on Google how to convert F to C and vice-versa
+    Broken keys should be ordered by when they first appear in the sentence.
+    Only one broken key per letter should be listed.
+    Letters will all be in lower case.
 
 Expected results
 
-convert("35°C") ➞ "95°F"
+findBrokenKeys("happy birthday", "hawwy birthday") ➞ ["p"]
 
-convert("19°F") ➞ "-7°C"
+findBrokenKeys("starry night", "starrq light") ➞ ["y", "n"]
 
-convert("33") ➞ "Error"
+findBrokenKeys("beethoven", "affthoif5") ➞ ["b", "e", "v", "n"]
 */
-//Celsius * 9/5 + 32
-function convert(string){
-    let verifData = string.match(/(\d+)(°[FC])/);
-    if(!verifData){
-        return "Error";
+function findBrokenKeys(string1, string2){
+    function stringSpliter(strings){
+        return strings.split('');
     }
-    let temp = parseInt(verifData[1]);
-    let unit = verifData[2];
-    let calcul;
-    if(unit === "°C"){
-        calcul = temp * 9/5 + 32;
-        return `${Math.round(calcul)}°F`;
+    let sOneArray = stringSpliter(string1);
+    let sTwoArray = stringSpliter(string2);
+    let comparArray=[];
+    for (let i = 0; i < sOneArray.length; i++) {
+        if(sOneArray[i] !== sTwoArray[i] && !(comparArray.includes(sOneArray[i]))){
+            comparArray.push(sOneArray[i]);
+        }
     }
-    else if(unit === "°F"){
-        calcul= (temp- 32) * 5/9;
-        return `${Math.round(calcul)}°C`;
-    }
-    else{
-        return "Error";
-    }
+    return comparArray;
+    
 }
-
-console.log(convert("35°C"));
-console.log(convert("19°F"));
-console.log(convert("33"));
+console.log(findBrokenKeys("happy birthday", "hawwy birthday"));
+console.log(findBrokenKeys("starry night", "starrq light"));
+console.log(findBrokenKeys("beethoven", "affthoif5"));
