@@ -1,39 +1,22 @@
 # becode-algo
  algo
  
- ## algo advenced 00
+ ## algo advenced 02
 
- 
+ A palindrome is any word or phrase that spells the same way both backward and forward.
 
-Create a functions that takes a num argument. You should then console.log all numbers from 1 to num.
+For example : race car is a palindrome. (don't take spaces, periods, dots, etc in consideration)
 
-But here’s the catch : multiple of 3 should print “Fizz” and multiples of 5 shoudl print “Buzz”. Lastly if the number is multiple of 3 and 5, it should print FizzBuzz
+Other examples : Madam, I'm Adam, radar, kayak, etc.
+
+You should create a function isPalindrome that takes a parameter text and returns a boolean indicating if the provided text is a palindrome or not.
 Notes
 
-    Your code should be modular. You must be able to pass any numbers as n and the code should still work.
+    You should be able to to ignore all special characters, spaces, dots, periods, etc. and be case insensitive
 
 Expected results
 
-In the console, if the num is 20, for example :
-
-1
-2
-Fizz
-4
-Buzz
-Fizz
-7
-8
-Fizz
-Buzz
-11
-Fizz
-13
-14
-FizzBuzz
-16
-17
-Fizz
-19
-Buzz
-
+isPalindrome("kayak") ---> true
+isPalindrome("race car") ---> true
+isPalindrome("hello world") ---> false
+isPalindrome("Madam, I'm Adam") ---> true

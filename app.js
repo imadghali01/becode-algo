@@ -16,6 +16,32 @@ isPalindrome("race car") ---> true
 isPalindrome("hello world") ---> false
 isPalindrome("Madam, I'm Adam") ---> true*/
 
+//effacer les espaces/, et autre signes / comparer en partant du charactere au centre du tableau si la chaine de character a la fin de la string == l inverse d une chaine  au debut
+
 function isPalindrome(string){
-    
+    let stringsplit = string.split('');
+    let stringToA = arrayCleaner(stringsplit).filter(function(chaine) {
+        return chaine !== ''; // Filtre les chaînes vides
+      });;
+    let count = 0;
+
+    console.log(stringToA);
+    function arrayCleaner(array) {
+        return array.map(function(chaine) {
+          return chaine.replace(/[\W_]+/g, '').toLowerCase()
+        });
+    }
+    for (let i = stringToA.length-1; i > (stringToA.length/2); i--) {
+        if(!(stringToA[i] == stringToA[count])){
+            console.log(stringToA[i]);
+            console.log(stringToA[count]);
+            return false;
+        }
+        count++;
+    }
+    return true;
 }
+console.log(isPalindrome("kayak"));
+console.log(isPalindrome("race car"));
+console.log(isPalindrome("hello world"));
+console.log(isPalindrome("Madam, I'm Adam"));
