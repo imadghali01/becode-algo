@@ -1,57 +1,54 @@
-/*
+/*Write a function called ransomNote which takes two parameters : noteText and magazineText.
 
-Create a functions that takes a num argument. You should then console.log all numbers from 1 to num.
+The goal is : with all the words of magazineText, you should be able to create the noteText.
 
-But here’s the catch : multiple of 3 should print “Fizz” and multiples of 5 shoudl print “Buzz”. Lastly if the number is multiple of 3 and 5, it should print FizzBuzz
+The function should return true if we are able to write the noteText with the words from magazineText or false if we can't.
 Notes
 
-    Your code should be modular. You must be able to pass any numbers as n and the code should still work.
+Here are two examples :
 
-Expected results
+noteText = "this is a secret note to you from a secret admirer"
 
-In the console, if the num is 20, for example :
+magazineText = "puerto rico is a great place you must hike far from town to find a secret waterfall that i am an admirer of but note that it is not as hard as it seems this is my advice to you"
 
-1
-2
-Fizz
-4
-Buzz
-Fizz
-7
-8
-Fizz
-Buzz
-11
-Fizz
-13
-14
-FizzBuzz
-16
-17
-Fizz
-19
-Buzz
-*/
-function fizzBuzz(number){
-    for (let i = 1; i <= number ; i++) {
-        let currentNum = isTreeOr5(i);
-        console.log(currentNum)
+In the case above, it would be false. Why ? Because all the words are present, but secret appears only once in the magazineText, but there are two secret in the noteText
+
+If the noteText was
+
+"this is a note to you from a secret admirer"
+
+That would work and would be true
+
+Test your code with these text and others.*/
+
+function ransomNote(noteText, magazineText){
+    let noteSplit = noteText.split(/\s+/);
+    let magazineSplit = magazineText.split(/\s+/);
+    
+    function countWords(wordsArray) {
+        let wordCount = {};
+        for (let word of wordsArray) {
+            wordCount[word] = (wordCount[word] || 0) + 1;
+        }
+        return wordCount;
     }
-    function isTreeOr5(aNum){
-        if(aNum % 3 == 0 && aNum % 5 == 0){
-            return "FizzBuzz"
-        }
-        else if(aNum % 3 == 0){
-            return "Fizz";
-        }
-        else if(aNum % 5 == 0){
-            return "Buzz";
-        }
-        else{
-            return aNum;
+
+    // Compter les occurrences des mots dans noteText et magazineText
+    let noteWordCount = countWords(noteSplit);
+    let magazineWordCount = countWords(magazineSplit);
+
+    // Vérifier si chaque mot de noteText est présent en quantité suffisante dans magazineText
+    for (let word in noteWordCount) {
+        if (!magazineWordCount[word] || magazineWordCount[word] < noteWordCount[word]) {
+            return false;
         }
     }
+
+    return true;
 }
-fizzBuzz(10);
-fizzBuzz(30);
-fizzBuzz(18);
+
+console.log(ransomNote("this is a secret note to you from a secret admirer", 
+"puerto rico is a great place you must hike far from town to find a secret waterfall that i am an admirer of but note that it is not as hard as it seems this is my advice to you"));
+console.log(ransomNote("this is a note to you from a secret admirer", 
+"puerto rico is a great place you must hike far from town to find a secret waterfall that i am an admirer of but note that it is not as hard as it seems this is my advice to you"));
+    
