@@ -21,11 +21,9 @@ isPalindrome("Madam, I'm Adam") ---> true*/
 function isPalindrome(string){
     let stringsplit = string.split('');
     let stringToA = arrayCleaner(stringsplit).filter(function(chaine) {
-        return chaine !== ''; // Filtre les chaînes vides
+        return chaine !== ''; 
       });;
     let count = 0;
-
-    console.log(stringToA);
     function arrayCleaner(array) {
         return array.map(function(chaine) {
           return chaine.replace(/[\W_]+/g, '').toLowerCase()
@@ -33,8 +31,6 @@ function isPalindrome(string){
     }
     for (let i = stringToA.length-1; i > (stringToA.length/2); i--) {
         if(!(stringToA[i] == stringToA[count])){
-            console.log(stringToA[i]);
-            console.log(stringToA[count]);
             return false;
         }
         count++;
