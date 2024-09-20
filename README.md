@@ -1,15 +1,10 @@
 # becode-algo
  algo
  
- ## algo advenced 04
+ ## algo advenced 05
 
- Create a function that takes a string parameter and return another string with all the words inversed.
+ Create a function that takes an array and reverses it.
 Notes
 
-Attention !
-
-    The order of the words doesn't change, just the letters of each word
-
-Expected results
-
-"This is a string of words" ----> "siht si a gnirts fo sdrow"
+    Don't use reverse()
+    Don't create a new array and push elements to it.
