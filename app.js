@@ -35,4 +35,4 @@ function isSmooth(string){
 }
 console.log(isSmooth("Marta appreciated deep perpendicular right trapezoids"));
 console.log(isSmooth("Someone is outside the doorway"));
-console.log(isSmooth("She eats super righteously"));
+console.log(isSmooth("She eats luper righteously"));
