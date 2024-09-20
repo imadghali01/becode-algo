@@ -22,17 +22,24 @@ function caesarCipher(string, number){
     let stringToAr = stringSpliter.filter((el)=>{
         return (el !== " ");
     });
+    console.log(alphabet.indexOf("y"));
+    console.log(alphabet.length);
     const newceasar = stringToAr.map( (e)=>{
         let switchLetter = alphabet.indexOf(e);
         if(switchLetter >= alphabet.length-(number-1) && number > 0){
-            return e = alphabet[(switchLetter+number)-alphabet.length];
+          //  return e = alphabet[(switchLetter+number)-alphabet.length];
+          return e = alphabet[alphabet.length-1 % switchLetter];
         }
         else if(switchLetter < 0+(number-1) && number < 0){
-            return e = alphabet[alphabet.length-(switchLetter+number)]
+          // return e = alphabet[alphabet.length-(switchLetter+number)];
+          // return e = alphabet[(alphabet.lenght-1)- ]
+          //}
+            return e = alphabet[switchLetter+number];
         }
-        return e = alphabet[switchLetter+number];
     })
     return newceasar;
 
 }
 console.log(caesarCipher("My name is Henrique", 3));
+console.log(caesarCipher("bqq mggrgt", -2));
+console.log(caesarCipher("zoo keeper", 2));
