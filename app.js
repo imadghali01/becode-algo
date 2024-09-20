@@ -5,10 +5,10 @@ Notes
     Don't create a new array and push elements to it.
 */
 function arrayReverser(array){
-    array.forEach(element => {
+    array.forEach(element, i => {
         let switchs = element;
-        element=array[array.lenght-index];
-        array[array.lenght-index] = switchs;
+        element=array[array.lenght-i];
+        array[array.lenght-i] = switchs;
     });
     return array;
 }
