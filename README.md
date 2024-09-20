@@ -1,22 +1,15 @@
 # becode-algo
  algo
  
- ## algo advenced 02
+ ## algo advenced 04
 
- A palindrome is any word or phrase that spells the same way both backward and forward.
-
-For example : race car is a palindrome. (don't take spaces, periods, dots, etc in consideration)
-
-Other examples : Madam, I'm Adam, radar, kayak, etc.
-
-You should create a function isPalindrome that takes a parameter text and returns a boolean indicating if the provided text is a palindrome or not.
+ Create a function that takes a string parameter and return another string with all the words inversed.
 Notes
 
-    You should be able to to ignore all special characters, spaces, dots, periods, etc. and be case insensitive
+Attention !
+
+    The order of the words doesn't change, just the letters of each word
 
 Expected results
 
-isPalindrome("kayak") ---> true
-isPalindrome("race car") ---> true
-isPalindrome("hello world") ---> false
-isPalindrome("Madam, I'm Adam") ---> true
+"This is a string of words" ----> "siht si a gnirts fo sdrow"

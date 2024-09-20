@@ -1,38 +1,16 @@
-/*Caesar Cipher is a way of "encrypting" a text that, supposably, Julius Caesar used in his communication.
-
-We switch every letter with, for example, two letters before in the alphabet.
-
-The Caesar cipher function will take two parameters str and num; str represents the text we want to cipher and num de amount of letters you want to go forward or backward (using negative numbers)
+/*Create a function that takes a string parameter and return another string with all the words inversed.
 Notes
 
-    Make it case incensitive
-    You should be able to loop back or forward into de the alphabet (if you have to go 3 from z, it would be c)
+Attention !
+
+    The order of the words doesn't change, just the letters of each word
 
 Expected results
 
-caesarCipher("zoo keeper", 2) ----> "bqq mggrgt"
+"This is a string of words" ----> "siht si a gnirts fo sdrow"*/
 
-caesarCipher("bqq mggrgt", -2) ----> "zoo keeper"
-
-caesarCipher("My name is Henrique", 3) ----> "pb qdph lv khqultxh "
-*/
-function caesarCipher(string, number){
-    let stringSpliter = string.toLowerCase().split('');
-    let alphabet = "abcdefghijklmnopqrstuvwxyz".split('');
-    let stringToAr = stringSpliter.filter((el)=>{
-        return (el !== " ");
-    });
-    const newceasar = stringToAr.map( (e)=>{
-        let switchLetter = alphabet.indexOf(e);
-        if(switchLetter >= alphabet.length-(number-1) && number > 0){
-            return e = alphabet[(switchLetter+number)-alphabet.length];
-        }
-        else if(switchLetter < 0+(number-1) && number < 0){
-            return e = alphabet[alphabet.length-(switchLetter+number)]
-        }
-        return e = alphabet[switchLetter+number];
-    })
-    return newceasar;
-
+function wordReverser(string){
+const stringspl = string.split('').reverse();
+return stringspl;
 }
-console.log(caesarCipher("My name is Henrique", 3));
+console.log(wordReverser("This is a string of words"));
