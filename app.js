@@ -1,19 +1,14 @@
-/*Create a function that takes a string parameter and return another string with all the words inversed.
+/*Create a function that takes an array and reverses it.
 Notes
 
-Attention !
+    Don't use reverse()
+    Don't create a new array and push elements to it.
+*/
+function arrayReverser(array){
+    array.forEach(element, i => {
+        let switch = element;
+        element=array[array.lenght-i];
+        array[a]
+    });
 
-    The order of the words doesn't change, just the letters of each word
-
-Expected results
-
-"This is a string of words" ----> "siht si a gnirts fo sdrow"*/
-
-function wordReverser(string){
-const stringspl = string.split(' ');
-let newA = stringspl.map((e)=>{
-    return e.split('').reverse().toString().replace(/,/g , '');
-});
-return newA;
 }
-console.log(wordReverser("This is a string of words"));
