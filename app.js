@@ -16,3 +16,17 @@ caesarCipher("bqq mggrgt", -2) ----> "zoo keeper"
 
 caesarCipher("My name is Henrique", 3) ----> "pb qdph lv khqultxh "
 */
+function caesarCipher(string, number){
+    let stringSpliter = string.split('');
+    let alphabet = "abcdefghijkmnopqrstuvwxyz".split('');
+    let stringToAr = stringSpliter.filter((el)=>{
+        return (el !== " ");
+    });
+    const newceasar = stringToAr.map( (e)=>{
+        let switchLetter = alphabet.indexOf(e);
+        letter = alphabet[switchLetter+number];
+    })
+    return newceasar;
+
+}
+console.log(caesarCipher("My name is Henrique", 3));
