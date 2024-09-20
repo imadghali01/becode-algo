@@ -10,7 +10,10 @@ Expected results
 "This is a string of words" ----> "siht si a gnirts fo sdrow"*/
 
 function wordReverser(string){
-const stringspl = string.split('').reverse();
-return stringspl;
+const stringspl = string.split(' ');
+let newA = stringspl.map((e)=>{
+    return e.split('').reverse().toString().replace(/,/g , '');
+});
+return newA;
 }
 console.log(wordReverser("This is a string of words"));
