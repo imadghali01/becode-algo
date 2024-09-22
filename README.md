@@ -1,19 +1,17 @@
 # becode-algo
  algo
  
- ## algo part3 exo 5
- 
- Create a function that converts Celsius to Fahrenheit and vice versa.
+ ## algo advanced exo 6
+
+ Write a function that takes as argument an array of numbers numArray and the sum we want to obtain.
+
+Your function should return every pair of numbers from numArray that adds up to the 'sum'
 Notes
 
-    Round to the nearest integer.
-    If the input is incorrect, return "Error".
-    Look on Google how to convert F to C and vice-versa
+    The result should be an array of arrays.
+    Any number in the array can be used in multiple pairs (look at the "4" in the exemple below)
 
 Expected results
 
-convert("35°C") ➞ "95°F"
-
-convert("19°F") ➞ "-7°C"
-
-convert("33") ➞ "Error"
+// For "sum" = 7
+[1, 6, 4, 5, 3, 3] ---> [[6,1], [3,4], [3,4]]
