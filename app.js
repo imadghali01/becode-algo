@@ -5,11 +5,12 @@ Notes
     Don't create a new array and push elements to it.
 */
 function arrayReverser(array){
-    array.forEach(element, i => {
-        let switchs = element;
-        element=array[array.lenght-i];
-        array[array.lenght-i] = switchs;
-    });
+    for (let i = 0; i <= Math.floor((array.length-1)/2) ; i++) {
+        let switchs = array[i];
+        array[i]=array[(array.length-1)-i];
+        array[(array.length-1)-i] = switchs;
+        
+    }
     return array;
 }
 console.log(arrayReverser([1, 2, 3, 4, 5]));
