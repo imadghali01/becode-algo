@@ -1,21 +1,12 @@
-/*Check if Two Arrays Contain the Same Values
+/*
+Create a function that generates a random rgb value. The outcome should be the same as we declare it in CSS : rgb(?, ?, ?)
 
 ex :
 
-const arr1 = [1, 2, 3, 4];
-const arr2 = [3, 1, 4, 2];
-const arr3 = [1, 2, 3];
+randomRGB();
+// Result : "rgb(232, 115, 164)"*/
 
-areEqual(arr1, arr2);
-// Result : true
-
-areEqual(arr1, arr3);
-// Result : false*/
-const array1 = [1, 2, 3, 4];
-const array2 = [3, 1, 4, 2];
-const array3 = [1, 2, 3];
-const areEqual = (arr1, arr2) => arr1.length === arr2.length && arr1.every((el) => arr2.includes(el));
-
-console.log(areEqual(array1, array2));
-console.log(areEqual(array1, array3));
-
+const randomRGB = () => {let random=[];for(let i = 0; i < 3; i++) { random[i] = Math.floor(Math.random()*256) } return "rgb("+random[0]+", "+random[1]+", "+random[2]+")"};
+console.log(randomRGB());
+console.log(randomRGB());
+console.log(randomRGB());
