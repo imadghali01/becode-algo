@@ -1,13 +1,10 @@
-/*capitalize("belgium");
-// Result : "Belgium"
+/*Find the days between 2 given days
 
-capitalize("brazil");
-// Result : "Brazil"
+ex :
 
-capitalize("brussels");
-// Result : "Brussels"*/
-function capitalize(string){let capitLetter = string[0].toUpperCase(); console.log(string.replace(string.charAt(0), capitLetter));}
+dayDif(new Date("2020-10-21"), new Date("2021-10-22"));
+// Result : 366*/
 
-capitalize("belgium");
-capitalize("brazil");
-capitalize("brussels");
+function dayDif(date1, date2){console.log(Math.abs((date1.getTime()) - (date2.getTime()))/(60*60*24*1000));}
+
+dayDif(new Date("2020-10-21"), new Date("2021-10-22"));

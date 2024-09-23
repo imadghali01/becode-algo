@@ -1,13 +1,11 @@
 # becode-algo
 algo
 
-## algo-optionnal-01
+## algo-optionnal-02
 
-capitalize("belgium");
-// Result : "Belgium"
+Find the days between 2 given days
 
-capitalize("brazil");
-// Result : "Brazil"
+ex :
 
-capitalize("brussels");
-// Result : "Brussels"
+dayDif(new Date("2020-10-21"), new Date("2021-10-22"));
+// Result : 366
