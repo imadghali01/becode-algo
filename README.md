@@ -1,17 +1,19 @@
 # becode-algo
  algo
  
- ## algo advanced exo 6
+ ## algo advanced exo 7
 
- Write a function that takes as argument an array of numbers numArray and the sum we want to obtain.
+ Fibonacci sequence starts with 1 and 1 and the next numbers are always the sum of the last two numbers. So... Here is the sequence :
 
-Your function should return every pair of numbers from numArray that adds up to the 'sum'
+1 1 2 3 5 8 13 21 34 ...
+
+Write a function that takes a num number and returns an array with the num first elements of the Fibonacci sequence.
 Notes
 
-    The result should be an array of arrays.
-    Any number in the array can be used in multiple pairs (look at the "4" in the exemple below)
+    Recursion would be the best way to solve it but there is another simple way.
 
 Expected results
 
-// For "sum" = 7
-[1, 6, 4, 5, 3, 3] ---> [[6,1], [3,4], [3,4]]
+fibonacci(4) ----> [1, 1, 2, 3]
+fibonacci(9) ----> [1, 1, 2, 3, 5, 8, 13, 21, 34]
+fibonacci(6) ----> [1, 1, 2, 3, 5, 8]
