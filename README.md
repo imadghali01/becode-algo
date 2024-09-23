@@ -1,11 +1,11 @@
 # becode-algo
 algo
 
-## algo-optionnal-02
+## algo-optional-03
 
-Find the days between 2 given days
+Find the average between multiple numbers using reduce method.
 
-ex :
+ex:
 
-dayDif(new Date("2020-10-21"), new Date("2021-10-22"));
-// Result : 366
+average(1, 2, 3, 4);
+// Result: 2.5

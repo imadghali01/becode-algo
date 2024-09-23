@@ -1,10 +1,9 @@
-/*Find the days between 2 given days
+/*Find the average between multiple numbers using reduce method.
 
-ex :
+ex:
 
-dayDif(new Date("2020-10-21"), new Date("2021-10-22"));
-// Result : 366*/
+average(1, 2, 3, 4);
+// Result: 2.5*/
+function average(array){ console.log(array.reduces()/array.length)}
 
-function dayDif(date1, date2){console.log(Math.abs((date1.getTime()) - (date2.getTime()))/(60*60*24*1000));}
-
-dayDif(new Date("2020-10-21"), new Date("2021-10-22"));
+average(1, 2, 3, 4);
