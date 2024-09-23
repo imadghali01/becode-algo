@@ -1,11 +1,17 @@
 # becode-algo
 algo
 
-## algo-optional-06
+## algo-optional-07
 
-Create a function that generates a random rgb value. The outcome should be the same as we declare it in CSS : rgb(?, ?, ?)
+Create a function that takes a string and a letter and counts how many times the letter appears in the string
 
 ex :
 
-randomRGB();
-// Result : "rgb(232, 115, 164)"
+occurencies("hello", "l");
+// Result : 2
+
+occurencies("abracadabra", "a");
+// Result : 5
+
+occurencies("oups", "z");
+// Result : 0
