@@ -1,7 +1,7 @@
 # becode-algo
 algo
 
-## algo-optional-06
+## algo-optional-05
 
 Check if Two Arrays Contain the Same Values
 

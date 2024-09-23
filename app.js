@@ -18,4 +18,3 @@ const areEqual = (arr1, arr2) => arr1.length === arr2.length && arr1.every((el) 
 
 console.log(areEqual(array1, array2));
 console.log(areEqual(array1, array3));
-
