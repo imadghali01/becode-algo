@@ -11,16 +11,7 @@ Expected results
 // For "sum" = 7
 [1, 6, 4, 5, 3, 3] ---> [[6,1], [3,4], [3,4]]*/
 function twoSums(array, sum){
-    /*let newArray=[];
-    for (let i = 0; i < array.length-1; i++) {
-       for (let j = 1; j < array.length; j++) {
-            if (array[i]+array[j] == sum && i !== j){
-                newArray.push([array[i],array[j]]);
-            }
-        }
-    }
-    return newArray;*/
-    let newArray = [];
+    let newArray=[];
     let seen = new Set();
 
     for (let i = 0; i < array.length; i++) {
