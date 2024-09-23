@@ -1,19 +1,13 @@
-/*Create a function that remove duplicates from an array. (oneliner).
+/*capitalize("belgium");
+// Result : "Belgium"
 
-ex:
+capitalize("brazil");
+// Result : "Brazil"
 
-removeDuplicates([4, 9, 5, 1, 3, 2, 4, 1, 8]);
-// Result : [4, 9, 5, 1, 3, 2, 8]
+capitalize("brussels");
+// Result : "Brussels"*/
+function capitalize(string){let capitLetter = string[0].toUpperCase(); console.log(string.replace(string.charAt(0), capitLetter));}
 
-removeDuplicates(["hello", "world", "goodbye", "world"]);
-// Result : ['hello', 'world', 'goodbye']
-
-removeDuplicates([true, true, false, true, true, false]);
-// Result : [true, false]*/
-
-const removeDuplicates = (array)=>{return [...new Set(array)];};
-console.log(removeDuplicates([true, true, false, true, true, false]));
-console.log(removeDuplicates(["hello", "world", "goodbye", "world"]));
-console.log(removeDuplicates([4, 9, 5, 1, 3, 2, 4, 1, 8]));
-
-
+capitalize("belgium");
+capitalize("brazil");
+capitalize("brussels");
