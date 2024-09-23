@@ -1,10 +1,12 @@
-/*Find the average between multiple numbers using reduce method.
+/*Get the Smallest Element of an Array
 
-ex:
+ex :
 
-average(1, 2, 3, 4);
-// Result: 2.5*/
-const average = (...numbers) => numbers.reduce((a, b) => a + b, 0) / numbers.length;
+const arr = [13, 7, 11, 3, 9, 15, 17];
 
+getSmallest(arr);
+// Result: 3*/
+const arr = [13, 7, 11, 3, 9, 15, 17];
 
-console.log(average(1, 2, 3, 4));
+const getSmallest = (array) => console.log(Math.min(...array));
+getSmallest(arr);

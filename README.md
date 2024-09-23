@@ -1,11 +1,13 @@
 # becode-algo
 algo
 
-## algo-optional-03
+## algo-optional-04
 
-Find the average between multiple numbers using reduce method.
+Get the Smallest Element of an Array
 
-ex:
+ex :
 
-average(1, 2, 3, 4);
-// Result: 2.5
+const arr = [13, 7, 11, 3, 9, 15, 17];
+
+getSmallest(arr);
+// Result: 3
