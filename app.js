@@ -1,12 +1,21 @@
-/*Get the Smallest Element of an Array
+/*Check if Two Arrays Contain the Same Values
 
 ex :
 
-const arr = [13, 7, 11, 3, 9, 15, 17];
+const arr1 = [1, 2, 3, 4];
+const arr2 = [3, 1, 4, 2];
+const arr3 = [1, 2, 3];
 
-getSmallest(arr);
-// Result: 3*/
-const arr = [13, 7, 11, 3, 9, 15, 17];
+areEqual(arr1, arr2);
+// Result : true
 
-const getSmallest = (array) => console.log(Math.min(...array));
-getSmallest(arr);
+areEqual(arr1, arr3);
+// Result : false*/
+const array1 = [1, 2, 3, 4];
+const array2 = [3, 1, 4, 2];
+const array3 = [1, 2, 3];
+const areEqual = (arr1, arr2) => arr1.length === arr2.length && arr1.every((el) => arr2.includes(el));
+
+console.log(areEqual(array1, array2));
+console.log(areEqual(array1, array3));
+
