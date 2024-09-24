@@ -15,3 +15,4 @@ occurencies("abracadabra", "a");
 
 occurencies("oups", "z");
 // Result : 0
+

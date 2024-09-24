@@ -10,7 +10,7 @@ occurencies("abracadabra", "a");
 
 occurencies("oups", "z");
 // Result : 0*/
-
-/*console.log(occurencies("hello", "l"));
+function occurencies(string, char){let filtredSt=string.split(char);return filtredSt.length -1};
+console.log(occurencies("hello", "l"));
 console.log(occurencies("abracadabra", "a"));
-console.log(occurencies("oups", "z"));*/
+console.log(occurencies("oups", "z"));
