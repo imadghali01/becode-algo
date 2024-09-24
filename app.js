@@ -1,16 +1,11 @@
-/*Create a function that takes a string and a letter and counts how many times the letter appears in the string
+/*Create a function that returns the sum of all positive numbers in an array. (negative numbers should be ignored). 
+If only negative numbers are present, it should return 0
 
 ex :
 
-occurencies("hello", "l");
-// Result : 2
+onlyPositives([1, 6, 2, -3, 5, -12]);
+// Result : 14
 
-occurencies("abracadabra", "a");
-// Result : 5
-
-occurencies("oups", "z");
+onlyPositives([-3, -4, -2]);
 // Result : 0*/
-function occurencies(string, char){let filtredSt=string.split(char);return filtredSt.length -1};
-console.log(occurencies("hello", "l"));
-console.log(occurencies("abracadabra", "a"));
-console.log(occurencies("oups", "z"));
+function onlyPositives(array){ let sum=0;array.forEach(element => { if(element > 0 ){sum+=element}});}
