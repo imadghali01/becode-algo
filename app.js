@@ -1,11 +1,42 @@
-/*Create a function that returns the sum of all positive numbers in an array. (negative numbers should be ignored). 
-If only negative numbers are present, it should return 0
+/*Create a function that takes an array of objects and an object with one key/value pair as arguments. 
+The function should return every entries that are the same than the object.
 
-ex :
+(This exercise will be very usefull in many scenarios later in the future)
 
-onlyPositives([1, 6, 2, -3, 5, -12]);
-// Result : 14
+Example :
 
-onlyPositives([-3, -4, -2]);
-// Result : 0*/
-function onlyPositives(array){ let sum=0;array.forEach(element => { if(element > 0 ){sum+=element}});}
+scanAndFind(
+  [
+    {
+      firstName: "Vito",
+      lastName: "Corleone",
+    },
+    {
+      firstName: "Jon",
+      lastName: "Snow",
+    },
+    {
+      firstName: "Harry",
+      lastName: "Potter",
+    },
+    {
+      firstName: "Michal",
+      lastName: "Corleone",
+    },
+  ],
+  {
+    lastName: "Corleone",
+  }
+);
+
+// Result : [{firstName: Vito, lastName: Corleone}, {firstName: Michael, lastName: Corleone}]
+*/
+function scanAndFind(objectArray,keyValpair){ let filtredOb = {};objectArray.forEach((element, i) => {if (element[2] == keyValpair){filtredOb[i]=element}});return filtredOb;}
+console.log(scanAndFind([
+    { fullName: "Roi Baudoin", id: 49762 },
+    { fullName: "Margareth Tatcher", id: 94357 },
+    { fullName: "Barack Obama", id: 76458 },
+    { fullName: "Emmanuel Macron", id: 10687 },
+    { fullName: "Charles de Gaulle", id: 67098 },
+    { fullName: "Boris Johnson", id: 16437 },],
+    { id: 10687 }))
