@@ -31,7 +31,7 @@ scanAndFind(
 
 // Result : [{firstName: Vito, lastName: Corleone}, {firstName: Michael, lastName: Corleone}]
 */
-function scanAndFind(objectArray,keyValpair){ let filtredOb = {};objectArray.forEach((element, i) => {if (element[2] == keyValpair){filtredOb[i]=element}});return filtredOb;}
+function scanAndFind(objectArray,keyValpair){ let filtredOb = [];objectArray.forEach(element => {if ( Object.keys(element)[1] == Object.keys(keyValpair)[0] && Object.values(element)[1] == Object.values(keyValpair)[0]){filtredOb.push(element)}});return filtredOb;}
 console.log(scanAndFind([
     { fullName: "Roi Baudoin", id: 49762 },
     { fullName: "Margareth Tatcher", id: 94357 },
@@ -39,4 +39,27 @@ console.log(scanAndFind([
     { fullName: "Emmanuel Macron", id: 10687 },
     { fullName: "Charles de Gaulle", id: 67098 },
     { fullName: "Boris Johnson", id: 16437 },],
-    { id: 10687 }))
+    { id: 10687 }));
+    console.log(scanAndFind(
+      [
+        {
+          firstName: "Vito",
+          lastName: "Corleone",
+        },
+        {
+          firstName: "Jon",
+          lastName: "Snow",
+        },
+        {
+          firstName: "Harry",
+          lastName: "Potter",
+        },
+        {
+          firstName: "Michal",
+          lastName: "Corleone",
+        },
+      ],
+      {
+        lastName: "Corleone",
+      }
+    ));
